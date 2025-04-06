@@ -1,0 +1,32 @@
+{
+  "version": 2,
+  "builds": [
+    {
+      "src": "wwwroot/**/*",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/wwwroot/index.html"
+    },
+    {
+      "src": "/portfolio-details",
+      "dest": "/wwwroot/portfolio-details.html"
+    },
+    {
+      "src": "/service-details",
+      "dest": "/wwwroot/service-details.html"
+    },
+    {
+      "src": "/starter-page",
+      "dest": "/wwwroot/starter-page.html"
+    },
+    {
+      "src": "/(.+)",
+      "dest": "/wwwroot/$1"
+    }
+  ]
+}
+

@@ -1,0 +1,3 @@
+ServiceID: service_9e5vi7j 
+TemplateID: template_1olahsj
+Public Key: 6bMde8ZnGx_ImkxRG

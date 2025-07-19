@@ -9,9 +9,8 @@
     <title>Koray Topuz - Web Developer</title>
     
     <!-- Preload critical resources -->
-    <link rel="preload" href="./iPortfolio-1.0.0/assets/img/biometric.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="./iPortfolio-1.0.0/assets/img/home.webp" as="image" fetchpriority="high">
-    <link rel="preload" href="./iPortfolio-1.0.0/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="preload" href="./iPortfolio-1.0.0/assets/img/biometric.jpg" as="image" fetchpriority="high">
+    <link rel="preload" href="./iPortfolio-1.0.0/assets/img/home.jpg" as="image" fetchpriority="high">
     <link rel="dns-prefetch" href="https://fonts.googleapis.com">
     <link rel="dns-prefetch" href="https://fonts.gstatic.com">
     <link rel="dns-prefetch" href="https://www.google.com">
@@ -41,41 +40,25 @@
 
     <!-- Critical CSS - Inline for above-the-fold content -->
     <style>
-        /* Critical styles for initial render - Optimized for performance */
-        body { margin: 0; font-family: 'Poppins', sans-serif; line-height: 1.6; }
-        .header { background: #040b14; color: white; position: fixed; width: 100%; z-index: 1000; }
-        .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./iPortfolio-1.0.0/assets/img/home.webp') center/cover; }
-        .section-title h2 { font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 700; text-align: center; margin-bottom: 1rem; }
-        .skill-category { margin-bottom: 25px; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        /* Critical styles for initial render */
+        body { margin: 0; font-family: 'Poppins', sans-serif; }
+        .skill-category { margin-bottom: 25px; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff; }
         .category-title { font-size: 1.1rem; font-weight: 600; color: #333; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
         .skill { display: flex; align-items: center; color: #555; font-size: 0.95rem; }
         .skill-item { margin-bottom: 8px; }
-        .bi-square-fill { font-size: 0.65rem; margin-right: 5px; color: #007bff; }
+        .bi-square-fill { font-size: 0.65rem; margin-right: 5px; }
         .skill-name { font-weight: bold; }
-        .main { margin-left: 0; }
-        @media (min-width: 1200px) { .main { margin-left: 300px; } }
-        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
-        .row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
-        .col-lg-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
-        @media (max-width: 991px) { .col-lg-6 { flex: 0 0 100%; max-width: 100%; } }
     </style>
 
-    <!-- Non-critical CSS - Loaded asynchronously -->
-    <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="./iPortfolio-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="./iPortfolio-1.0.0/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
-    <link href="./iPortfolio-1.0.0/assets/css/main.css" rel="stylesheet" media="print" onload="this.media='all'">
-    
-    <!-- Fallback for browsers that don't support onload -->
-    <noscript>
-        <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-        <link href="./iPortfolio-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
-        <link href="./iPortfolio-1.0.0/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-        <link href="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
-        <link href="./iPortfolio-1.0.0/assets/css/main.css" rel="stylesheet">
-    </noscript>
+    <!-- Vendor CSS Files -->
+    <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+    <link href="./iPortfolio-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+    <link href="./iPortfolio-1.0.0/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+    <link href="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+
+    <!-- Main CSS File -->
+    <link href="./iPortfolio-1.0.0/assets/css/main.css" rel="stylesheet">
 
     <!-- =======================================================
     * Template Name: iPortfolio
@@ -92,10 +75,7 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <picture>
-        <source srcset="./iPortfolio-1.0.0/assets/img/biometric.webp" type="image/webp">
-        <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" alt="Koray Topuz Profile" class="img-fluid rounded-circle" loading="lazy" width="120" height="120">
-      </picture>
+      <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" alt="Koray Topuz Profile" class="img-fluid rounded-circle" loading="lazy" width="120" height="120">
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -136,10 +116,7 @@
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
 
-          <picture>
-            <source srcset="./iPortfolio-1.0.0/assets/img/home.webp" type="image/webp">
-            <img src="./iPortfolio-1.0.0/assets/img/home.jpg" alt="Hero Background" data-aos="fade-in" class="" loading="lazy" width="1920" height="1080">
-          </picture>
+          <img src="./iPortfolio-1.0.0/assets/img/home.jpg" alt="Hero Background" data-aos="fade-in" class="" loading="lazy" width="1920" height="1080">
 
           <div class="container" data-aos="fade-up" data-aos-delay="100">
               <h2>Hello</h2>
@@ -159,10 +136,7 @@
 
               <div class="row gy-4 justify-content-center">
                   <div class="col-lg-4">
-                      <picture>
-                        <source srcset="./iPortfolio-1.0.0/assets/img/biometric.webp" type="image/webp">
-                        <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" class="img-fluid about-image" alt="Koray Topuz About" loading="lazy" width="300" height="300">
-                      </picture>
+                      <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" class="img-fluid about-image" alt="Koray Topuz About" loading="lazy" width="300" height="300">
                   </div>
                   <div class="col-lg-8 content">
                       <h2>Koray Topuz</h2>
@@ -667,73 +641,44 @@
     });
   </script>
 
-  <!-- Non-critical JavaScript - Loaded asynchronously -->
+  <!-- Vendor JS Files - Loaded normally to avoid issues -->
+  <script src="./iPortfolio-1.0.0/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/aos/aos.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/typed.js/typed.umd.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/waypoints/noframework.waypoints.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/glightbox/js/glightbox.min.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
+  <script src="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+
+  <!-- Main JS File -->
+  <script src="./iPortfolio-1.0.0/assets/js/main.js" defer></script>
+
+  <!-- Initialize AOS and Typed.js -->
   <script>
-    // Load non-critical scripts after page load with better optimization
-    window.addEventListener('load', function() {
-      // Load Bootstrap with higher priority
-      const bootstrapScript = document.createElement('script');
-      bootstrapScript.src = './iPortfolio-1.0.0/assets/vendor/bootstrap/js/bootstrap.bundle.min.js';
-      bootstrapScript.async = true;
-      document.head.appendChild(bootstrapScript);
+    document.addEventListener('DOMContentLoaded', function() {
+      // Initialize AOS
+      if (typeof AOS !== 'undefined') {
+        AOS.init({
+          duration: 1000,
+          easing: 'ease-in-out',
+          once: true,
+          mirror: false,
+          offset: 50
+        });
+      }
 
-      // Load AOS (Animate On Scroll) with delay for better performance
-      setTimeout(function() {
-        const aosScript = document.createElement('script');
-        aosScript.src = './iPortfolio-1.0.0/assets/vendor/aos/aos.js';
-        aosScript.async = true;
-        aosScript.onload = function() {
-          if (typeof AOS !== 'undefined') {
-            AOS.init({
-              duration: 1000,
-              easing: 'ease-in-out',
-              once: true,
-              mirror: false,
-              offset: 50
-            });
-          }
-        };
-        document.head.appendChild(aosScript);
-      }, 100);
-
-      // Load Typed.js with delay
-      setTimeout(function() {
-        const typedScript = document.createElement('script');
-        typedScript.src = './iPortfolio-1.0.0/assets/vendor/typed.js/typed.umd.js';
-        typedScript.async = true;
-        typedScript.onload = function() {
-          if (typeof Typed !== 'undefined') {
-            new Typed('.typed', {
-              strings: ['Designer', 'Developer', 'Freelancer'],
-              typeSpeed: 100,
-              backSpeed: 100,
-              backDelay: 2000,
-              loop: true
-            });
-          }
-        };
-        document.head.appendChild(typedScript);
-      }, 200);
-
-      // Load other non-critical scripts with staggered loading
-      const scripts = [
-        './iPortfolio-1.0.0/assets/vendor/purecounter/purecounter_vanilla.js',
-        './iPortfolio-1.0.0/assets/vendor/waypoints/noframework.waypoints.js',
-        './iPortfolio-1.0.0/assets/vendor/glightbox/js/glightbox.min.js',
-        './iPortfolio-1.0.0/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
-        './iPortfolio-1.0.0/assets/vendor/isotope-layout/isotope.pkgd.min.js',
-        './iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.js',
-        './iPortfolio-1.0.0/assets/js/main.js'
-      ];
-
-      scripts.forEach((src, index) => {
-        setTimeout(function() {
-          const script = document.createElement('script');
-          script.src = src;
-          script.async = true;
-          document.head.appendChild(script);
-        }, 300 + (index * 50)); // Stagger loading by 50ms each
-      });
+      // Initialize Typed.js
+      if (typeof Typed !== 'undefined') {
+        new Typed('.typed', {
+          strings: ['Designer', 'Developer', 'Freelancer'],
+          typeSpeed: 100,
+          backSpeed: 100,
+          backDelay: 2000,
+          loop: true
+        });
+      }
     });
   </script>
 

@@ -4,7 +4,18 @@
 <head>
     <meta charset="utf-8">
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
-    <title>Koray Topuz</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="format-detection" content="telephone=no">
+    <title>Koray Topuz - Web Developer</title>
+    
+    <!-- Preload critical resources -->
+    <link rel="preload" href="./iPortfolio-1.0.0/assets/img/biometric.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="./iPortfolio-1.0.0/assets/img/home.webp" as="image" fetchpriority="high">
+    <link rel="preload" href="./iPortfolio-1.0.0/assets/vendor/bootstrap/css/bootstrap.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+    <link rel="dns-prefetch" href="https://fonts.googleapis.com">
+    <link rel="dns-prefetch" href="https://fonts.gstatic.com">
+    <link rel="dns-prefetch" href="https://www.google.com">
+    <link rel="dns-prefetch" href="https://cdn.jsdelivr.net">
     <meta name="description" content="Web geliştirme hizmetleri, C#, ASP.NET Core, WordPress, ReactJS, Flutter, Web API teknolojileri ile profesyonel çözümler. Modern web projeleri ve uygulama geliştirme.">
     <meta name="keywords" content="web geliştirme, C#, ASP.NET Core, WordPress, ReactJS, Flutter, Web API, yazılım geliştirici, web tasarım, mobil uygulama geliştirme, SEO uyumlu web tasarım">
     <meta property="og:title" content="Web Geliştirme Hizmetleri - C#, ASP.NET Core, WordPress, ReactJS, Flutter">
@@ -23,20 +34,48 @@
     <link href="./iPortfolio-1.0.0/assets/img/output.ico" rel="icon">
     <link href="./iPortfolio-1.0.0/assets/img/output.ico" rel="apple-touch-icon">
 
-    <!-- Fonts -->
+    <!-- Fonts - Optimized for performance -->
     <link href="https://fonts.googleapis.com" rel="preconnect">
     <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Vendor CSS Files -->
-    <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-    <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-    <link href="./iPortfolio-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
-    <link href="./iPortfolio-1.0.0/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
-    <link href="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+    <!-- Critical CSS - Inline for above-the-fold content -->
+    <style>
+        /* Critical styles for initial render - Optimized for performance */
+        body { margin: 0; font-family: 'Poppins', sans-serif; line-height: 1.6; }
+        .header { background: #040b14; color: white; position: fixed; width: 100%; z-index: 1000; }
+        .hero { min-height: 100vh; display: flex; align-items: center; background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('./iPortfolio-1.0.0/assets/img/home.webp') center/cover; }
+        .section-title h2 { font-size: clamp(2rem, 5vw, 2.5rem); font-weight: 700; text-align: center; margin-bottom: 1rem; }
+        .skill-category { margin-bottom: 25px; padding: 15px; background-color: #f8f9fa; border-radius: 8px; border-left: 4px solid #007bff; box-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .category-title { font-size: 1.1rem; font-weight: 600; color: #333; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px; }
+        .skill { display: flex; align-items: center; color: #555; font-size: 0.95rem; }
+        .skill-item { margin-bottom: 8px; }
+        .bi-square-fill { font-size: 0.65rem; margin-right: 5px; color: #007bff; }
+        .skill-name { font-weight: bold; }
+        .main { margin-left: 0; }
+        @media (min-width: 1200px) { .main { margin-left: 300px; } }
+        .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+        .row { display: flex; flex-wrap: wrap; margin: 0 -15px; }
+        .col-lg-6 { flex: 0 0 50%; max-width: 50%; padding: 0 15px; }
+        @media (max-width: 991px) { .col-lg-6 { flex: 0 0 100%; max-width: 100%; } }
+    </style>
 
-    <!-- Main CSS File -->
-    <link href="./iPortfolio-1.0.0/assets/css/main.css" rel="stylesheet">
+    <!-- Non-critical CSS - Loaded asynchronously -->
+    <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./iPortfolio-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./iPortfolio-1.0.0/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet" media="print" onload="this.media='all'">
+    <link href="./iPortfolio-1.0.0/assets/css/main.css" rel="stylesheet" media="print" onload="this.media='all'">
+    
+    <!-- Fallback for browsers that don't support onload -->
+    <noscript>
+        <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+        <link href="./iPortfolio-1.0.0/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+        <link href="./iPortfolio-1.0.0/assets/vendor/aos/aos.css" rel="stylesheet">
+        <link href="./iPortfolio-1.0.0/assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+        <link href="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+        <link href="./iPortfolio-1.0.0/assets/css/main.css" rel="stylesheet">
+    </noscript>
 
     <!-- =======================================================
     * Template Name: iPortfolio
@@ -53,7 +92,10 @@
     <i class="header-toggle d-xl-none bi bi-list"></i>
 
     <div class="profile-img">
-      <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" alt="" class="img-fluid rounded-circle" loading="lazy">
+      <picture>
+        <source srcset="./iPortfolio-1.0.0/assets/img/biometric.webp" type="image/webp">
+        <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" alt="Koray Topuz Profile" class="img-fluid rounded-circle" loading="lazy" width="120" height="120">
+      </picture>
     </div>
 
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
@@ -94,7 +136,10 @@
       <!-- Hero Section -->
       <section id="hero" class="hero section dark-background">
 
-          <img src="./iPortfolio-1.0.0/assets/img/home.jpg" alt="" data-aos="fade-in" class="" loading="lazy">
+          <picture>
+            <source srcset="./iPortfolio-1.0.0/assets/img/home.webp" type="image/webp">
+            <img src="./iPortfolio-1.0.0/assets/img/home.jpg" alt="Hero Background" data-aos="fade-in" class="" loading="lazy" width="1920" height="1080">
+          </picture>
 
           <div class="container" data-aos="fade-up" data-aos-delay="100">
               <h2>Hello</h2>
@@ -114,7 +159,10 @@
 
               <div class="row gy-4 justify-content-center">
                   <div class="col-lg-4">
-                      <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" class="img-fluid about-image" alt="" loading="lazy">
+                      <picture>
+                        <source srcset="./iPortfolio-1.0.0/assets/img/biometric.webp" type="image/webp">
+                        <img src="./iPortfolio-1.0.0/assets/img/biometric.jpg" class="img-fluid about-image" alt="Koray Topuz About" loading="lazy" width="300" height="300">
+                      </picture>
                   </div>
                   <div class="col-lg-8 content">
                       <h2>Koray Topuz</h2>
@@ -156,45 +204,8 @@
               height: auto;
           }
 
-          .skill-name {
-              font-weight: bold;
-          }
-
-          .bi-square-fill {
-              font-size: 0.65rem; /* Adjust the size as needed */
-              margin-right: 5px; /* Adjust the spacing as needed */
-          }
-
-          .skill-item {
-              margin-bottom: 8px; /* Adjust the spacing between skill items */
-          }
-
           .skills-content {
               row-gap: 5px; /* Adjust the spacing between rows */
-          }
-
-          .skill-category {
-              margin-bottom: 25px;
-              padding: 15px;
-              background-color: #f8f9fa;
-              border-radius: 8px;
-              border-left: 4px solid #007bff;
-          }
-
-          .category-title {
-              font-size: 1.1rem;
-              font-weight: 600;
-              color: #333;
-              margin-bottom: 12px;
-              text-transform: uppercase;
-              letter-spacing: 0.5px;
-          }
-
-          .skill {
-              display: flex;
-              align-items: center;
-              color: #555;
-              font-size: 0.95rem;
           }
       </style>
 
@@ -370,10 +381,13 @@
 
                     <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
                         <div class="portfolio-content h-100">
-                            <img src="./iPortfolio-1.0.0\assets\img\portfolio\cvprojectimg.png" class="img-fluid" alt="" loading="lazy">
+                            <picture>
+                              <source srcset="./iPortfolio-1.0.0/assets/img/portfolio/cvprojectimg.webp" type="image/webp">
+                              <img src="./iPortfolio-1.0.0/assets/img/portfolio/cvprojectimg.png" class="img-fluid" alt="CvAnalysis Project" loading="lazy" width="400" height="300">
+                            </picture>
                             <div class="portfolio-info">
                                 <p>CvAnalysis</p>
-                                <a href="./iPortfolio-1.0.0\assets\img\portfolio\cvprojectimg.png" title="CvAnalysis" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="./iPortfolio-1.0.0/assets/img/portfolio/cvprojectimg.png" title="CvAnalysis" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
                                 <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
                             </div>
                         </div>
@@ -381,7 +395,7 @@
 
                       <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
                           <div class="portfolio-content h-100">
-                              <img src="./iPortfolio-1.0.0/assets/img/portfolio/ca1.png" class="img-fluid" alt="" loading="lazy">
+                              <img src="./iPortfolio-1.0.0/assets/img/portfolio/ca1.png" class="img-fluid" alt="CarBook Rent A Car Project" loading="lazy" width="400" height="300">
                               <div class="portfolio-info">
 
                                   <p>CarBook Rent A Car</p>
@@ -624,20 +638,104 @@
   <!-- Preloader -->
   <div id="preloader"></div>
 
-  <!-- Vendor JS Files -->
-  <script src="./iPortfolio-1.0.0/assets/vendor/bootstrap/js/bootstrap.bundle.min.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/php-email-form/validate.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/aos/aos.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/typed.js/typed.umd.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/purecounter/purecounter_vanilla.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/waypoints/noframework.waypoints.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/glightbox/js/glightbox.min.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/isotope-layout/isotope.pkgd.min.js" defer></script>
-  <script src="./iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.js" defer></script>
+  <!-- Critical JavaScript - Load immediately -->
+  <script>
+    // Critical functionality for initial page load
+    document.addEventListener('DOMContentLoaded', function() {
+      // Smooth scrolling for navigation links
+      document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = document.querySelector(this.getAttribute('href'));
+          if (target) {
+            target.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+          }
+        });
+      });
 
-  <!-- Main JS File -->
-  <script src="./iPortfolio-1.0.0/assets/js/main.js" defer></script>
+      // Mobile menu toggle
+      const headerToggle = document.querySelector('.header-toggle');
+      const navmenu = document.querySelector('#navmenu');
+      if (headerToggle && navmenu) {
+        headerToggle.addEventListener('click', function() {
+          navmenu.classList.toggle('mobile-nav-active');
+        });
+      }
+    });
+  </script>
+
+  <!-- Non-critical JavaScript - Loaded asynchronously -->
+  <script>
+    // Load non-critical scripts after page load with better optimization
+    window.addEventListener('load', function() {
+      // Load Bootstrap with higher priority
+      const bootstrapScript = document.createElement('script');
+      bootstrapScript.src = './iPortfolio-1.0.0/assets/vendor/bootstrap/js/bootstrap.bundle.min.js';
+      bootstrapScript.async = true;
+      document.head.appendChild(bootstrapScript);
+
+      // Load AOS (Animate On Scroll) with delay for better performance
+      setTimeout(function() {
+        const aosScript = document.createElement('script');
+        aosScript.src = './iPortfolio-1.0.0/assets/vendor/aos/aos.js';
+        aosScript.async = true;
+        aosScript.onload = function() {
+          if (typeof AOS !== 'undefined') {
+            AOS.init({
+              duration: 1000,
+              easing: 'ease-in-out',
+              once: true,
+              mirror: false,
+              offset: 50
+            });
+          }
+        };
+        document.head.appendChild(aosScript);
+      }, 100);
+
+      // Load Typed.js with delay
+      setTimeout(function() {
+        const typedScript = document.createElement('script');
+        typedScript.src = './iPortfolio-1.0.0/assets/vendor/typed.js/typed.umd.js';
+        typedScript.async = true;
+        typedScript.onload = function() {
+          if (typeof Typed !== 'undefined') {
+            new Typed('.typed', {
+              strings: ['Designer', 'Developer', 'Freelancer'],
+              typeSpeed: 100,
+              backSpeed: 100,
+              backDelay: 2000,
+              loop: true
+            });
+          }
+        };
+        document.head.appendChild(typedScript);
+      }, 200);
+
+      // Load other non-critical scripts with staggered loading
+      const scripts = [
+        './iPortfolio-1.0.0/assets/vendor/purecounter/purecounter_vanilla.js',
+        './iPortfolio-1.0.0/assets/vendor/waypoints/noframework.waypoints.js',
+        './iPortfolio-1.0.0/assets/vendor/glightbox/js/glightbox.min.js',
+        './iPortfolio-1.0.0/assets/vendor/imagesloaded/imagesloaded.pkgd.min.js',
+        './iPortfolio-1.0.0/assets/vendor/isotope-layout/isotope.pkgd.min.js',
+        './iPortfolio-1.0.0/assets/vendor/swiper/swiper-bundle.min.js',
+        './iPortfolio-1.0.0/assets/js/main.js'
+      ];
+
+      scripts.forEach((src, index) => {
+        setTimeout(function() {
+          const script = document.createElement('script');
+          script.src = src;
+          script.async = true;
+          document.head.appendChild(script);
+        }, 300 + (index * 50)); // Stagger loading by 50ms each
+      });
+    });
+  </script>
 
 </body>
 

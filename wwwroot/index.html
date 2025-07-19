@@ -74,6 +74,7 @@
       <ul>
         <li><a href="#hero" class="active"><i class="bi bi-house navicon"></i>Home </a></li>
         <li><a href="#about"><i class="bi bi-person navicon"></i> About</a></li>
+        <li><a href="#skills"><i class="bi bi-gear navicon"></i> Technical Skills</a></li>
         <li><a href="#resume"><i class="bi bi-file-earmark-text navicon"></i> Resume</a></li>
         <li><a href="#portfolio"><i class="bi bi-images navicon"></i> Portfolio</a></li>
         <li><a href="#services"><i class="bi bi-hdd-stack navicon"></i> Services</a></li>
@@ -165,11 +166,35 @@
           }
 
           .skill-item {
-              margin-bottom: 1px; /* Adjust the spacing between skill items */
+              margin-bottom: 8px; /* Adjust the spacing between skill items */
           }
 
           .skills-content {
               row-gap: 5px; /* Adjust the spacing between rows */
+          }
+
+          .skill-category {
+              margin-bottom: 25px;
+              padding: 15px;
+              background-color: #f8f9fa;
+              border-radius: 8px;
+              border-left: 4px solid #007bff;
+          }
+
+          .category-title {
+              font-size: 1.1rem;
+              font-weight: 600;
+              color: #333;
+              margin-bottom: 12px;
+              text-transform: uppercase;
+              letter-spacing: 0.5px;
+          }
+
+          .skill {
+              display: flex;
+              align-items: center;
+              color: #555;
+              font-size: 0.95rem;
           }
       </style>
 
@@ -178,8 +203,7 @@
 
           <!-- Section Title -->
           <div class="container section-title" data-aos="fade-up">
-              <h2>Skills</h2>
-
+              <h2>Technical Skills</h2>
           </div><!-- End Section Title -->
 
           <div class="container" data-aos="fade-up" data-aos-delay="100">
@@ -187,47 +211,99 @@
               <div class="row skills-content skills-animation">
 
                   <div class="col-lg-6">
+                      <div class="skill-category">
+                          <h4 class="category-title">Programming</h4>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">C#</span></span>
+                          </div>
+                         
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">TypeScript</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">JavaScript</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">SQL</span></span>
+                          </div>
+                      </div>
 
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">C# Asp.Net Core</span></span>
+                      <div class="skill-category">
+                          <h4 class="category-title">Backend Technologies</h4>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">ASP.NET Core</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">RESTful API</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">MVC</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Azure</span></span>
+                          </div>
+                      </div>
 
-                      </div><!-- End Skills Item -->
-
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">MSSQL</span></span>
-                      </div><!-- End Skills Item -->
-
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">ReactJs</span></span>
-
-                      </div><!-- End Skills Item -->
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">RestAPI</span></span>
-
-                      </div><!-- End Skills Item -->
+                      <div class="skill-category">
+                          <h4 class="category-title">Frontend Technologies</h4>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">React.js</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">HTML5</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">CSS3</span></span>
+                          </div>
+                      </div>
                   </div>
 
                   <div class="col-lg-6">
+                      <div class="skill-category">
+                          <h4 class="category-title">Database</h4>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">MSSQL</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">PostgreSQL</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">SQLite</span></span>
+                          </div>
+                      </div>
 
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Flutter</span></span>
+                      <div class="skill-category">
+                          <h4 class="category-title">Tools</h4>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Agile (Scrum)</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Clean Code</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Test-Driven Development (TDD)</span></span>
+                          </div>
+                      </div>
 
-                      </div><!-- End Skills Item -->
+                      <div class="skill-category">
+                          <h4 class="category-title">Version Control</h4>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Git</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">GitHub</span></span>
+                          </div>
+                      </div>
 
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Wordpress</span></span>
-                      </div><!-- End Skills Item -->
-
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Entity Framework</span></span>
-
-                      </div><!-- End Skills Item -->
-                      <div class="progress">
-                          <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">MVC</span></span>
-
-                      </div><!-- End Skills Item -->
-
-
+                      <div class="skill-category">
+                          <h4 class="category-title">DevOps</h4>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Azure DevOps</span></span>
+                          </div>
+                          <div class="skill-item">
+                              <span class="skill"><i class="bi bi-square-fill"></i> <span class="skill-name">Docker</span></span>
+                          </div>
+                      </div>
                   </div>
 
               </div>
@@ -261,7 +337,7 @@
                       <h3 class="resume-title">Professional Experience</h3>
                       <div class="resume-item">
                           <h4>Merinos</h4>
-                          <h5>Intern (2025-present)</h5>
+                          <h5>Intern (02.2025-06.2025)</h5>
                           <ul>
                               <li>During my internship, I am gaining education and experience in areas such as C#, Flutter, Network Technologies, and ReactJs.</li>
                           </ul>
@@ -291,6 +367,17 @@
               <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
 
                   <div class="row gy-4 isotope-container" data-aos="fade-up" data-aos-delay="200">
+
+                    <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
+                        <div class="portfolio-content h-100">
+                            <img src="./iPortfolio-1.0.0\assets\img\portfolio\cvprojectimg.png" class="img-fluid" alt="" loading="lazy">
+                            <div class="portfolio-info">
+                                <p>CvAnalysis</p>
+                                <a href="./iPortfolio-1.0.0\assets\img\portfolio\cvprojectimg.png" title="CvAnalysis" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                            </div>
+                        </div>
+                    </div><!-- End Portfolio Item -->
 
                       <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-product">
                           <div class="portfolio-content h-100">
@@ -337,16 +424,7 @@
                               </div>
                           </div>
                       </div><!-- End Portfolio Item -->
-                      <div class="col-lg-4 col-md-6 portfolio-item isotope-item filter-books">
-                        <div class="portfolio-content h-100">
-                            <img src="./iPortfolio-1.0.0\assets\img\cvprojectimg.png" class="img-fluid" alt="" loading="lazy">
-                            <div class="portfolio-info">
-                                <p>CvAnalysis</p>
-                                <a href="./iPortfolio-1.0.0\assets\img\cvprojectimg.png" title="CvAnalysis" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
-                                <a href="portfolio-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
-                            </div>
-                        </div>
-                    </div><!-- End Portfolio Item -->
+                 
                    
 
                   </div><!-- End Portfolio Container -->
@@ -378,14 +456,7 @@
                   </div>
                   <!-- End Service Item -->
 
-                  <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="200">
-                      <div class="icon flex-shrink-0"><i class="bi bi-card-checklist"></i></div>
-                      <div>
-                          <h4 class="title"><a href="#" class="stretched-link">Wordpress</a></h4>
-                          <p class="description">I can create your WordPress site according to your requirements.</p>
-                      </div>
-                  </div><!-- End Service Item -->
-
+                
                   <div class="col-lg-4 col-md-6 service-item d-flex" data-aos="fade-up" data-aos-delay="300">
                       <div class="icon flex-shrink-0"><i class="bi bi-bar-chart"></i></div>
                       <div>

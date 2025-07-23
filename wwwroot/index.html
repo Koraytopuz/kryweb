@@ -41,7 +41,7 @@
     <!-- Critical CSS - Inline for above-the-fold content -->
     <style>
         /* Critical styles for initial render */
-        body { margin: 0; font-family: 'Poppins', sans-serif; }
+        body { margin: 0; font-family: 'Poppins', sans-serif; overflow-x: hidden; }
         .header { background: #040b14; color: white; position: fixed; width: 100%; z-index: 1000; }
         .main { margin-left: 0; }
         @media (min-width: 1200px) { .main { margin-left: 300px; } }
@@ -156,7 +156,7 @@
 
           <div class="container" data-aos="fade-up" data-aos-delay="100">
               <h2>Hello</h2>
-              <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer, ">Developer</span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+              <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
           </div>
 
       </section><!-- /Hero Section -->
@@ -703,8 +703,11 @@
 
       // Initialize Typed.js
       if (typeof Typed !== 'undefined') {
+        var typedElement = document.querySelector('.typed');
+        var typedItems = typedElement ? typedElement.getAttribute('data-typed-items') : '';
+        var strings = typedItems ? typedItems.split(',').map(function(s){ return s.trim(); }) : ['Designer', 'Developer', 'Freelancer'];
         new Typed('.typed', {
-          strings: ['Designer', 'Developer', 'Freelancer'],
+          strings: strings,
           typeSpeed: 100,
           backSpeed: 100,
           backDelay: 2000,

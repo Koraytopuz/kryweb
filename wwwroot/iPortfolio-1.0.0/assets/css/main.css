@@ -528,7 +528,7 @@ section,
   content: "";
   position: absolute;
   display: block;
-  width: 100%;
+  width: 50px;
   height: 3px;
   background: var(--accent-color);
   left: 0;

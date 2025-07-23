@@ -6,7 +6,7 @@
     <meta content="width=device-width, initial-scale=1.0" name="viewport">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="format-detection" content="telephone=no">
-    <title>Koray Topuz | Web Geliştirici & Yazılım Uzmanı</title>
+    <title>Koray Topuz</title>
     
     <!-- Preload critical resources -->
     <link rel="preload" href="./iPortfolio-1.0.0/assets/img/biometric.webp" as="image" fetchpriority="high">
@@ -134,7 +134,7 @@
     <a href="index.html" class="logo d-flex align-items-center justify-content-center">
       <!-- Uncomment the line below if you also wish to use an image logo -->
       <!-- <img src="assets/img/logo.png" alt=""> -->
-      <h1 class="sitename">Koray Topuz | Web Geliştirici & Yazılım Uzmanı</h1>
+      <h1 class="sitename">Koray Topuz</h1>
     </a>
 
     <div class="social-links text-center">
@@ -175,7 +175,7 @@
 
           <div class="container" data-aos="fade-up" data-aos-delay="100">
               <h2>Hello</h2>
-              <p>I'm <span class="typed" data-typed-items="Designer, Developer, Freelancer"></span><span class="typed-cursor typed-cursor--blink" aria-hidden="true"></span></p>
+              <p>I'm Koray Topuz</p>
           </div>
 
       </section><!-- /Hero Section -->
@@ -727,10 +727,13 @@
         var strings = typedItems ? typedItems.split(',').map(function(s){ return s.trim(); }) : ['Designer', 'Developer', 'Freelancer'];
         new Typed('.typed', {
           strings: strings,
-          typeSpeed: 100,
-          backSpeed: 100,
-          backDelay: 2000,
-          loop: true
+          typeSpeed: 120,
+          backSpeed: 80,
+          backDelay: 2500,
+          startDelay: 500,
+          loop: true,
+          smartBackspace: true,
+          showCursor: true
         });
       }
     });
